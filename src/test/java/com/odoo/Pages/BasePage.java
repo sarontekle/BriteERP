@@ -1,7 +1,7 @@
-package com.vytrack.pages;
+package com.odoo.Pages;
 
-import com.vytrack.utilities.BrowserUtils;
-import com.vytrack.utilities.Driver;
+import com.odoo.utilities.BrowserUtils;
+import com.odoo.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
