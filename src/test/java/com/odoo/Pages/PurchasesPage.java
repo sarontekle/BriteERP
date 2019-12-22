@@ -35,6 +35,21 @@ public class PurchasesPage extends BasePage{
     @FindBy(xpath = "//span[normalize-space()='Vendor Bills']")
     public WebElement vendorBills;
 
+    @FindBy(xpath = "//button[@aria-label='list']")
+    public WebElement listButton;
+
+    @FindBy(xpath = "//button[@aria-label='kanban']")
+    public WebElement kanbanButton;
+
+    @FindBy(xpath = "//button[@aria-label='pivot']")
+    public WebElement pivotButton;
+
+    @FindBy(xpath = "//button[@aria-label='graph']")
+    public WebElement graphButton;
+
+    @FindBy(xpath = "//button[@aria-label='calendar']")
+    public WebElement calendarButton;
+
 
 
 
