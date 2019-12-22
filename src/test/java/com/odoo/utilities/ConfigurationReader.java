@@ -18,6 +18,7 @@ import java.util.Properties;
  * reads the properties file configuration.properties
  */
 public class ConfigurationReader {
+
     private static Properties properties;
 
     static {
@@ -88,6 +89,9 @@ public class ConfigurationReader {
                         driver = new SafariDriver();
                         break;
                 }
+
+
+
             }
 
             return driver;
