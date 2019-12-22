@@ -1,5 +1,6 @@
 package com.odoo.utilities;
 
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
@@ -20,6 +21,7 @@ public class Driver {
 
     public static WebDriver get() {
         if (driver == null) {
+            // this line will tell which browser should open based on the value from properties file
             String browser = ConfigurationReader.get("browser");
             switch (browser) {
                 case "chrome":
@@ -70,6 +72,5 @@ public class Driver {
             driver.quit();
             driver = null;
         }
-
     }
 }

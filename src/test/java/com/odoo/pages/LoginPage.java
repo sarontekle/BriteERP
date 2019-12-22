@@ -1,4 +1,4 @@
-package com.odoo.Pages;
+package com.odoo.pages;
 
 import com.odoo.utilities.Driver;
 import org.openqa.selenium.WebElement;
