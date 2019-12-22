@@ -27,6 +27,9 @@ public abstract class BasePage {
     @CacheLookup
     protected WebElement loaderMask;
 
+    @FindBy(xpath = "//span[@class='o_notification_counter badge']")
+    public List<WebElement> notifications;
+
     @FindBy(linkText = "Log out")
     public WebElement logOutLink;
 
@@ -115,6 +118,7 @@ public abstract class BasePage {
         BrowserUtils.waitForClickablility(myAccount, 5).click();
 
     }
+
 
     public void navigateToModule(String tab) {
         String tabLocator = "//span[normalize-space()='" + tab + "' and contains(@class, 'oe_menu_text')]";
