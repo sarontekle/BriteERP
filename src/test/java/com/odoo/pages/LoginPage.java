@@ -15,7 +15,7 @@ public class LoginPage {
     @FindBy(id = "password")
     public WebElement password;
 
-    @FindBy(className = "btn btn-primary")
+    @FindBy(xpath = "//*[@type='submit']")
     public WebElement submit;
 
     public void login(String userNameStr, String passwordStr){
