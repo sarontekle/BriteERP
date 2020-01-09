@@ -72,7 +72,7 @@ dash.vendorbill.click();
     public void the_pos_manager_should_be_able_to_naviagte_to_vendor_bills_page() {
 //DashboardPage dash = new DashboardPage();
 //        System.out.println(dash.title.getText());
-    }
+}
 
 
 
