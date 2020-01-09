@@ -1,5 +1,6 @@
 package com.odoo.step_definitions;
 
+
 import com.odoo.utilities.ConfigurationReader;
 import com.odoo.utilities.Driver;
 import io.cucumber.core.api.Scenario;
@@ -11,9 +12,17 @@ import org.openqa.selenium.TakesScreenshot;
 public class Hooks {
 
     @Before
-    public void setUp() {
+
+    public void setUp() throws InterruptedException {
+        System.out.println("\nThis is coming from before scenario");
+
+
+
+
+
         System.out.println("\nTest Setup");
         Driver.get().get(ConfigurationReader.get("url"));
+
     }
 
     @After
@@ -27,5 +36,14 @@ public class Hooks {
         }
         Driver.closeDriver();
     }
+
+
+    @After("@sales_manager")
+    public void tearDownSalesManager(){
+        System.out.println("This is coming from after scenario for sales managers\n");
+
+    }
+
+
 
 }
