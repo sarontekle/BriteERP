@@ -7,12 +7,11 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {"json:target/cucumber.json",
-                "html:target/default-cucumber-reports"
-        },
+                "html:target/default-cucumber-reports"},
         features = "src/test/resources/features/",
         glue = "com/odoo/step_definitions",
         dryRun = false,
-        tags = " "
+        tags = "@login"
 )
 public class CukesRunner {
 }
