@@ -11,7 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class BasePage {
+public abstract class BasePage {
     public BasePage() {
         PageFactory.initElements(Driver.get(), this);
     }
@@ -67,7 +67,7 @@ public class BasePage {
      * @param module
      */
     public void navigateToModule(String module) {
-        String moduleLocator = "//span[text()[contains(.,"+module+")]]";
+        String moduleLocator = "//span[normalize-space()='"+ module + "' and contains(@class, 'oe_menu_text')]";
         try {
             BrowserUtils.waitForClickablility(By.xpath(moduleLocator), 5);
             WebElement tabElement = Driver.get().findElement(By.xpath(moduleLocator));
