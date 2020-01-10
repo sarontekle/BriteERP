@@ -1,4 +1,4 @@
-package com.odoo.Pages;
+package com.odoo.pages;
 
 import com.odoo.utilities.Driver;
 import org.openqa.selenium.WebElement;
@@ -16,13 +16,11 @@ public class LoginPage {
     @FindBy(id = "password")
     public WebElement password;
 
-    @FindBy(className = "btn btn-primary")
-    public WebElement submit;
 
     public void login(String userNameStr, String passwordStr){
         username.sendKeys(userNameStr);
         password.sendKeys(passwordStr);
-        submit.click();
+
     }
 
 

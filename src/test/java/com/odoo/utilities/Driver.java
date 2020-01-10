@@ -1,5 +1,6 @@
 package com.odoo.utilities;
 
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
@@ -20,6 +21,7 @@ public class Driver {
 
     public static WebDriver get() {
         if (driver == null) {
+
             String browser = ConfigurationReader.get("browser");
             switch (browser) {
                 case "chrome":
